@@ -1,0 +1,2 @@
+deku,16,male,Gaming,deku@hero.com,checked
+uravity,15,female,Gardening,ochako@hero.com,checked

@@ -1,0 +1,3 @@
+   /     this is float division. it's result will add the nubers after point llike 1.4222
+   //    this is inteser division . it's result won't add the numbers after point
+         so always use float division.
