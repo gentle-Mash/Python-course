@@ -9,4 +9,5 @@ the top.
 4. in python you can write this code      if x >= 70 and x < 80 
                              like this    if 70 <= x < 80
 
+5. use ceil of math module to round up decimal numbers
 
