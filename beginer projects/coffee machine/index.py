@@ -46,26 +46,15 @@ pennies = 0.01
 
 #************************************************* functions **************************************************
 def total_amount(): # money processing function
-
-    def total_coin_add(base, quantity):
-        coin = base * quantity
-        return coin
     
-    quarters_amount = int(input("How many quarters: ").strip())
-    q = total_coin_add(0.25, quarters_amount)
-
-    dimes_amount = int(input("How many dimes: ").strip())
-    d = total_coin_add(0.10, dimes_amount)
-
-    nickles_amount = int(input("How many nickles: ").strip())
-    n = total_coin_add(0.05, nickles_amount)
-
-    pennies_amount = int(input("How many pennis: ").strip())
-    p = total_coin_add(0.01, pennies_amount)
+    q = int(input("How many quarters: ").strip()) * 0.25
+    d = int(input("How many dimes: ").strip()) * 0.10
+    n = int(input("How many nickles: ").strip()) * 0.05
+    p = int(input("How many pennis: ").strip()) * 0.01
 
     total_price = q + d + n + p
-
     return total_price
+
 
 def machine_money_count(coffee_name): # keep track of total sell
     resources["money"] += MENU[coffee_name]["cost"]
@@ -91,7 +80,6 @@ def making_coffee(coffee_name):  # main coffee maker function
                 machine_money_count(coffee_name)
 
 
-
 def coffee_maker(coffee_name): # permission to make coffee function
     if is_sufficient(coffee_name) == True:
         print("Please pay first.")
@@ -103,7 +91,6 @@ def coffee_maker(coffee_name): # permission to make coffee function
         print(f"Sorry. Shortage of ingredients for your coffee {coffee_name}.")
  
 #************************************************* functions **************************************************
-
 
 
 #************************************************* main code **************************************************
@@ -134,7 +121,6 @@ def working():
             break        
         else:
             print("Type 1 or 2 or 3")
-
 
 working()
 
