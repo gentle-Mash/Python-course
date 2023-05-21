@@ -1,6 +1,10 @@
 import random
 
-words = ['apple','banana','mango','jack-fruit','manderine','absent','abuse','good','bad','great','right','wrong','up','down','left','quick','first','fast','slow','seco-nd','third','cat','dog','snake','camel','tiger','fox','wolf','river','ocean','asia','bangladesh','japan','pacific','liter ature','science','biology','physics','football']
+words = ['apple', 'banana', 'mango', 'jack-fruit', 'manderine', 'absent', 'abuse', 'good', 'bad', 'great', 'right',
+         'wrong', 'up', 'down', 'left', 'quick', 'first', 'fast', 'slow', 'seco-nd', 'third', 'cat', 'dog', 'snake',
+         'camel', 'tiger', 'fox', 'wolf', 'river', 'ocean', 'asia', 'bangladesh', 'japan', 'pacific', 'liter ature',
+         'science', 'biology', 'physics', 'football']
+
 
 def get_valid_word(words):
     word = random.choice(words)
@@ -8,7 +12,9 @@ def get_valid_word(words):
         word = random.choice(words)
     return word
 
+
 lives = 7
+
 
 def hangman():
     global lives
@@ -22,7 +28,6 @@ def hangman():
 
     word_letters = list(word)
     used_letters = list()
-    
 
     while len(word_letters) > 0 and lives > 0:
 
@@ -36,16 +41,15 @@ def hangman():
                 word_letters.remove(user_letter)
                 right_word[index] = user_letter
         elif (user_letter in used_letters) and (user_letter in word):
-           print("you have already guessed it. try different letter")
+            print("you have already guessed it. try different letter")
         else:
             lives -= 1
             print(f"you guessed wrong. guess again. your remaining live is {lives}")
-            
-        
-    
+
     if len(word_letters) == 0:
         print(f"yay!! you guessed the right word {right_word} : {word}")
     elif lives == 0:
         print(f"Sorry. you lost!!! the word was {word}")
+
 
 hangman()
