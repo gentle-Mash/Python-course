@@ -61,6 +61,7 @@ while True:
     if user_choice == 'yes':
         continue
     else:
+        my_screen.bye()
         break
 
     
