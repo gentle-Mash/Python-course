@@ -12,7 +12,7 @@ class Snake:
         snake_body = Turtle(shape='square')
         snake_body.shapesize(stretch_len=0.5, stretch_wid=0.5)
         snake_body.penup()
-        snake_body.color('white')
+        snake_body.color('black')
         snake_body.goto(position)
         self.main_body.append(snake_body)
 
@@ -28,7 +28,7 @@ class Snake:
 
     def restart(self):
         for body in self.main_body[3:]:
-            body.color('black')
+            body.color('white')
             self.main_body.remove(body)
         self.head.home()
     
