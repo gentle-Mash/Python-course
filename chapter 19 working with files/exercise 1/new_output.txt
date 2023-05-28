@@ -1,5 +1,5 @@
-deku's saly is 100000000000
-bakugo's saly is 4000000000000000
-shoto's saly is 5000000000000000
-ochako's saly is 100000000
-lida's saly is 30000000
+lida's saly is 30000000deku's salary is 100000000000
+bakugo's salary is 4000000000000000
+shoto's salary is 5000000000000000
+ochako's salary is 100000000
+lida's salary is 30000000
