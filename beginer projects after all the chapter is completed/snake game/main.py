@@ -33,10 +33,13 @@ def gameplay():
             score.increase_score()
             body.extend()
 
+
         #detect collision with wall
         if body.head.xcor() > 295 or body.head.xcor() < -295 or body.head.ycor() > 295 or body.head.ycor() < -295:
             play_game = False
             score.game_over()
+            if score.score > score.high_score:
+                score.high_score = score.score
             play_again()
 
         # detect colision with tail

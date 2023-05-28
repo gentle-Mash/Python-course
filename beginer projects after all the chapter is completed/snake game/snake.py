@@ -27,12 +27,15 @@ class Snake:
             self.main_body[0].forward(MOVE_DISTANCE)
 
     def restart(self):
-        for body in self.main_body[3:]:
-            body.color('white')
-            self.main_body.remove(body)
-        self.head.home()
-    
-    
+        for body in self.main_body:
+            body.goto(700,700)
+        self.main_body.clear()
+        
+        for position in STARTING_POSITION:
+            self.add_body(position)
+        self.head = self.main_body[0]
+        
+
     def up(self):
         if self.head.heading() != 270:
             self.head.setheading(90)
