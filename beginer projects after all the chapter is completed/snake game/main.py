@@ -27,6 +27,7 @@ def gameplay():
         time.sleep(0.06)
         body.move()
 
+
         # detect collision with food
         if body.head.distance(snacks) < 10:
             snacks.refresh()
@@ -39,7 +40,9 @@ def gameplay():
             play_game = False
             score.game_over()
             if score.score > score.high_score:
-                score.high_score = score.score
+                with open("data.txt","w") as DATA:
+                    DATA.write(str(score.score))
+                score.read_high_score()
             play_again()
 
         # detect colision with tail
@@ -61,15 +64,7 @@ def play_again():
         screen.bye()  
 
 
-
-
-
 gameplay()                
-
-  
-    
-
-            
 
 
 screen.mainloop()
