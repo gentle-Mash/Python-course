@@ -56,6 +56,7 @@ def gameplay():
 def play_again():
     user_input = turtle.textinput(title="Play again?", prompt="Type \'Yes\' or \'No\' ").lower().strip()
     if user_input == "yes":
+        score.read_high_score()
         body.restart()
         score.restart()
         time.sleep(3)
