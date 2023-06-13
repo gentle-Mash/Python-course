@@ -20,7 +20,7 @@ window.title("GUI")
 # package of tkinter and that is ttk . though you can work with tk alone but ttk will give us a betther view of our widgets
 
 name_label = ttk.Label(window, text="Enter your name: ") # here we are just defining that in our app there will be label but we didn't give our location of where the label will show up
-# for that you can use either pack or grid method 
+# for that you can use either pack or grid or palce method 
 # pack will centerize your label but with grid you can manipulate your label
 name_label.grid(row=0,column=0, sticky=tk.W)
 
