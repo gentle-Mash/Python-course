@@ -11,3 +11,6 @@ the top.
 
 5. use ceil of math module to round up decimal numbers
 
+6. def func(arg:type) -> output type:
+	pass
+
