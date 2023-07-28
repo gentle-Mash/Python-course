@@ -1,8 +1,10 @@
 import requests
 import smtplib
+import os
 
-EMAIL = "deku0001@mail.com"
-app_pass = ";aflhgoihuf"
+EMAIL = "practicecode254@gmail.com"
+app_pass = "zbrrchnvyowtarrf"
+
 
 
 API_KEY_STOCK = "HIJYEI5BDR2G9VQX"
@@ -38,9 +40,9 @@ difference_percentage = round(float(difference/float(yesterday_closing_price))*1
 
 up_down = None
 if difference > 0:
-    up_down = "⬆️"
+    up_down = "⬆"
 else:
-    up_down = "⬇️"
+    up_down = "⬇"
 
 if abs(difference_percentage) > 5:
     news_parameters = {
@@ -52,13 +54,15 @@ if abs(difference_percentage) > 5:
     news_response.raise_for_status()
 
     news_data = news_response.json()["articles"]
-    three_articles = news_data[0:4]
+    three_articles = news_data[0:3]
+    # print(three_articles)
 
     news = [f"{STOCK_NAME} {difference_percentage}%{up_down}  Headline: {item['title']}\nBrief: {item['description']}" for item in three_articles]
+    # print(news)
     
     for item in news:
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user=EMAIL, password=app_pass)
-            connection.sendmail(from_addr=EMAIL, to_addrs="ochako@mail.com", msg=item)
+            connection.sendmail(from_addr=EMAIL, to_addrs="practicecode254@gmail.com", msg=f"Subject:Breaking News\n\n{item}".encode('utf-8'))
 
