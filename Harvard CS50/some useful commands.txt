@@ -14,3 +14,6 @@ the top.
 6. def func(arg:type) -> output type:
 	pass
 
+7. use window_handles with selenium . it will return a list of windows opened in your browser with base window at 0 position and goes on and on
+
+8. use switch to switch between windows after 7 no. code
