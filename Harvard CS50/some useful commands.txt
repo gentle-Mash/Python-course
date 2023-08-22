@@ -17,3 +17,9 @@ the top.
 7. use window_handles with selenium . it will return a list of windows opened in your browser with base window at 0 position and goes on and on
 
 8. use switch to switch between windows after 7 no. code
+
+9. scroll methods-- with selenium
+   i. driver.execute_script("window.scrollBy(0,1000)","")
+   ii. find an x_path let's say abc
+      driver.execute_script("arguments[0].scrollIntoView();", abc)
+   iii. driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
