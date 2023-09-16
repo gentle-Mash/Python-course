@@ -1,0 +1,21 @@
+{{ url_for('route function name') }} --> for creating dynamic url
+
+{% for list in lists %}
+	html codes
+{% endfor %}
+
+
+{% if condition %}
+	html codes
+{% endif %}
+
+
+for template inheritance
+
+{% include 'file.html' %}
+
+{% extends 'file.html' %}
+
+{% block content %}
+	abc
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for blogposts in posts %}
+    <h1>{{ blogposts["title"] }}</h1>
+    <h2>{{ blogposts["subtitle"] }}</h2>
+    <h3>{{ blogposts["body"] }}</h3>
+    {% endfor %}
+
+    <hr>
+
+    {% for blogposts in posts %}
+        {% if blogposts["id"] == 3 %}
+        <h1>{{ blogposts["title"] }}</h1>
+        <h2>{{ blogposts["subtitle"] }}</h2>
+        <h3>{{ blogposts["body"] }}</h3>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
