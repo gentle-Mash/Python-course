@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Coffee and Power
+{% endblock %}
+
+{% block content %}
+<div class="my-5">
+    <div class="p-5 text-center ">
+      <div class="container py-5">
+        <h1 style="font-size: 70px;">☕️ Coffee & Wifi 💻</h1>
+        <p class="col-lg-8 mx-auto lead">
+          Want to work in a cafe, but need power and wifi?
+        </p>
+        <hr class="my-4"/>
+        <p class="col-lg-8 mx-auto lead">
+            You've found the right place! Checkout my collection of cafes with data on
+            power socket availability, wifi speed and coffee quality.
+        </p>
+        <a
+            class="btn btn-warning btn-lg"
+            href="{{ url_for('cafe') }}"
+            role="button"
+            >Show Me!
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

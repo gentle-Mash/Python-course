@@ -30,11 +30,11 @@ def receive_data():
     name = request.form["username"]
     email = request.form["email"]
     number = request.form["number"]
-    message = request.form["messsage"]
+    message = request.form["message"]
     
-    print(name, email, number, message, end="\n")
+    # print(name, email, number, message, end="\n")
 
-    return "Successfully sent your information"
+    return render_template("contact.html", message=message)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Coffee and Power
+{% endblock %}
+
+{% block content %}
+    <div class="container my-3">
+        <h1 style="font-size: 60px;" class="my-4">ADD CAFE</h1>
+        {{ render_form(form) }}
+        <br><br>
+        <a style="text-decoration: none; color: chocolate;" href="{{ url_for('cafe') }}">see all CAFES</a>
+    </div>  
+{% endblock %}

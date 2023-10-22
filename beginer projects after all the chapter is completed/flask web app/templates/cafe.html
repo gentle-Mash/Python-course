@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Cafes
+{% endblock %}
+
+{% block content %}
+    <div class="container my-4">
+      <h1 style="font-size: 60px;" class="my-4">All Cafes</h1>
+        <table class="table">
+          <thead>
+            <tr class="table-dark">
+              <th scope="col">Cafe Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">Open</th>
+              <th scope="col">Close</th>
+              <th scope="col">Coffee</th>
+              <th scope="col">Wifi</th>
+              <th scope="col">Power</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in lists %}
+              <tr class="table-dark">
+                <td>{{ item['Cafe Name'] }}</td>
+                <td><a style="text-decoration: none; color: chocolate;"  href="{{ item['Location'] }}">Map</a></td>
+                <td>{{ item['Open'] }}</td>
+                <td>{{ item['Close'] }}</td>
+                <td>{{ item['Coffee'] }}</td>
+                <td>{{ item['Wifi'] }}</td>
+                <td>{{ item['Power'] }}</td>
+                <td><a href="#"><button type="button" class="btn btn-info">Update</button></a> <a href="#"><button type="button" class="btn btn-danger">Delete</button></a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <br><br>
+        <a style="text-decoration: none; color: chocolate;" href="{{ url_for('home') }}">return to HOME</a>
+        <a style="text-decoration: none; color: chocolate; float: right;" href="{{ url_for('add') }}">Add Coffee shops</a>
+    </div>
+
+{% endblock %}
