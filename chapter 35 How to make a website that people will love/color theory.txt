@@ -1,0 +1,2 @@
+use complementary color for background but not for text
+then use various color palte websites such as color hunt .com

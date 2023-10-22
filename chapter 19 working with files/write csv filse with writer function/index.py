@@ -11,5 +11,5 @@ with open("file1.csv", "w", newline="") as ben: # here newline is to avoind blan
 with open("file2.csv", "w", newline="") as new: # here newline is to avoind blank lines in csv files
     sid = writer(new)
     # writerows method
-    sid.writerows([["name","country"],["Deku","Japan"],["Mina","Bangladesh"]])
+    sid.writerows([["Bakugo","Japan"]])
     

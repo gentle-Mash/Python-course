@@ -23,3 +23,6 @@ the top.
    ii. find an x_path let's say abc
       driver.execute_script("arguments[0].scrollIntoView();", abc)
    iii. driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
+
+10. for generating secret keys use--->
+	os.urandom(n).hex()

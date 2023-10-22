@@ -1,0 +1,20 @@
+
+
+<!-- u can simply use render form like this and boom your form will be created with 0 efforts -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{ bootstrap.load_css() }}
+    {% from 'bootstrap5/form.html' import render_form %}
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+            {{ render_form(form) }}
+    </div>
+</body>
+</html>
