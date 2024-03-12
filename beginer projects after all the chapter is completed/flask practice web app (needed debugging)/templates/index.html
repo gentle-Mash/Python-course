@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <h1>My Library</h1>
+    <br>
+    <a href="{{ url_for('add') }}">Add new book</a>
+
+    <h2>My lsit of Books</h2>
+
+    {% if lists==[]: %}
+        <p>the list is empty</p>
+
+    {% else %}
+
+        <ul>
+            {% for list in lists %}
+                <li>{{ list.title }} - {{list.author}} - {{list.rating}}/10 <a href="{{ url_for('edit', id=list.id) }}">Edit Rating</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+
+{% endblock %}
