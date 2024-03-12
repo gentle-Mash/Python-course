@@ -1,0 +1,56 @@
+<!-- {% extends "base.html" %}
+
+{% block title %}
+    Edit Book Ratings
+{% endblock %}
+
+{% block content %} -->
+
+    <!-- <div class="container my-5">
+        <h3>book name: {{ book.title }}</h3>
+        <h3>current rating is {{ book.rating }}</h3>
+        <form action="{{ url_for('edit') }}", method="post">
+            {{ form.csrf_token }}
+            <input hidden="hidden" name="id" value="{{book.id}}"> -->
+            <!-- {{ form.change_rating.label() }}
+            {{ form.change_rating() }}
+    
+            {{ form.submit() }} -->
+    
+        <!-- </form> -->
+        <!-- <br> --> 
+    <!-- <div class="container my-5">
+        <form action="{{ url_for('edit') }}" method="POST">
+            <p>Book Name: {{book.title}}</p>
+            <p>Current Rating {{book.rating}}</p>
+            <input hidden="hidden" name="id" value="{{book.id}}" />
+            <input name="rating" type="text" placeholder="New Rating" />
+            <button type="submit">Change Rating</button>
+        </form>
+        
+        <br><br> -->
+
+
+
+    <!-- </div> -->
+
+<!-- {% endblock %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Rating</title>
+  </head>
+  <body>
+    <form action="{{ url_for('edit') }}" method="post">
+      <p>Book Name: {{book.title}}</p>
+      <p>Current Rating {{book.rating}}</p>
+      <input hidden="hidden" name="id" value="{{book.id}}" />
+      <input name="rating" type="text" placeholder="New Rating" />
+      <button type="submit">Change Rating</button>
+    </form>
+    <br>
+    <a href="{{ url_for('home') }}">Return To Home</a>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Add Books
+{% endblock %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <form action="{{ url_for('add') }}", method="post">
+            {{ form.csrf_token }}
+    
+            {{ form.book.label() }}
+            {{ form.book() }}
+    
+            {{ form.author.label() }}
+            {{ form.author() }}
+    
+            {{ form.book_rating.label() }}
+            {{ form.book_rating() }}
+    
+            {{ form.submit() }}
+    
+        </form>
+        <br>
+        <a href="{{ url_for('home') }}">Return To Home</a>
+    </div>
+
+{% endblock %}

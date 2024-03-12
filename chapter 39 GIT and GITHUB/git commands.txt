@@ -1,0 +1,14 @@
+1. git init
+2. git add filename
+3. git add .
+4. git rm --cached -r filename
+5. git rm --cached -r .
+6. git status
+7. git commit -m "msg"
+8. git log
+9. git log --oneline
+10. git diff filename
+11. git checkout filename
+12. .gitignore
+13. git clone link
+14. git 

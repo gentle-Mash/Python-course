@@ -23,7 +23,7 @@ def fibonacci(n):
             fibonacci_previous = fibonacci_current
             fibonacci_current = fibonacci_new
             print(fibonacci_current, end=", ")
-    print()
+    # print()
 
 fibonacci(n)
 
